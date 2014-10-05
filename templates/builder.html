@@ -7,9 +7,10 @@
 var data = {};
 
 function new_item(self){
-    console.log("new");
-    console.log("len: "+self.value.length);
-    console.log("id: "+self.parentNode.children[self.parentNode.children.length-1].value);
+    /**************************************************
+     * Adds a new list element when you populate the last
+     * element. TODO: Add remove buttons
+     **************************************************/
     if (self.parentNode.children[self.parentNode.children.length-1].value.length>0){
         var node = document.createElement("INPUT");
         node.setAttribute('onchange', 'new_item(this)');
@@ -46,6 +47,11 @@ function submit(){
 
 }
 function jsonify(){
+    /*******************************************
+     * Store the user's list in a JSON object for
+     * storage in the db. Parsing is done on retrieval,
+     * since it needs to be a string in the db anyways.
+     *******************************************/
     var data = {};
     for (var li in document.getElementById("steps").children){
 
@@ -54,6 +60,7 @@ function jsonify(){
 </script>
 {% endblock %}
 {% block main %}
+<label>Title of Paper<input type="text" /></label>
 <form id="build_container">
     <div class="userlist" id="steps" name="steps">
         Steps Taken:
