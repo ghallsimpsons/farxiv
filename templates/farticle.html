@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block main %}
+<script type="text/javascript">
+show=true;
+function toggle(){
+    if (show){
+        show=false;
+        document.getElementById("title").innerHTML="Exploring the Lorum Ipsum Dolor";
+        document.getElementById("authors").innerHTML="J. Appleseed, R. Feynman";
+        document.getElementById("abstract").innerHTML="We will show asdf askdlgj asd asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds aoi awnn jpoz aweoig oicxkenoi ioajiajoifew jpokwoqf ok jijef oj ";
+        document.getElementById("section1-header").innerHTML="Welcome to the Jungle";
+        document.getElementById("section1").innerHTML=" asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds asdfklj weoiagj iaj jiwea aioewjfo poiewagojp jsdajas jeai ae oigpo q  ds ";
+    }
+    else {
+        show=true;
+        document.getElementById("title").innerHTML="";
+        document.getElementById("authors").innerHTML="";
+        document.getElementById("abstract").innerHTML="";
+        document.getElementById("section-header").innerHTML="";
+        document.getElementById("section").innerHTML="";
+    }
+}
+</script>
+<input type="button" onclick="toggle()" value="Populate!" />
+{% include 'farticle.tmpl' %}
+{% endblock %}

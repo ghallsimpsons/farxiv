@@ -7,5 +7,5 @@ class FarticleForm(ModelForm):
             self.author = user
             super(FarticleForm, self).__init__(*args, **kwargs)
         model = Farticle
-        fields = ['topic', 'title', 'farticle', 'failure_reasons', 'keywords']
+        fields = ['topic', 'title', 'failure_reasons', 'keywords']
         

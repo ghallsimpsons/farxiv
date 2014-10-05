@@ -25,12 +25,17 @@ class Farticle(models.Model):
     author      = models.ForeignKey(User)
     topic       = models.ForeignKey(Topic)
     title       = models.TextField(max_length=1024)
-    farticle    = models.FileField()
     failure_reasons = models.ManyToManyField(FailureReasons)
     keywords    = models.ManyToManyField(Keyword)
     #Presentations = models.ManyToManyField(SlidesharePresentations)
     submitted_date = models.DateTimeField(auto_now_add=True)
     modified_date = models.DateTimeField(auto_now=True)
+    render_type = models.TextField()
+
+class QuickFarticle(Farticle):
+    steps       = models.TextField()
+    problems    = models.TextField()
+    suggestions = models.TextField()
 
 """
 class SlidesharePresentation(models.Model):

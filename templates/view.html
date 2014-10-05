@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block header_css %}
+<link rel="stylesheet" type="text/css" href="/static/css/farticle.css" />
+{% endblock %}
+{% block main %}
+<div id="farticle">
+    <div id="title">{{ title }}</div>
+    <div id="authors">{{ authors }}</div>
+    <div id="abstract-header">Abstract</div>
+    <div id="abstract"></div>
+    <div id="farticle-body">
+        <div id="steps-header" class="section-header">Steps Taken</div>
+        <div id="steps" class="section">
+            <ul>
+                {% for li in steps %}
+                <li>{{ li }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="problems-header" class="section-header">Problems Encountered</div>
+        <div id="problems" class="section">
+            <ul>
+                {% for li in problems %}
+                <li>{{ li }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="suggestions-header" class="section-header">Suggestions for future research</div>
+        <div id="suggestions" class="section">
+            <ul>
+                {% for li in suggestions %}
+                <li>{{ li }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
