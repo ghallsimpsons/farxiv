@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block header_css %}
+<link rel="stylesheet" type="text/css" href="/static/css/builder.css" />
+{% endblock %}
+{% block header_scripts %}
+<script type="text/javascript">
+var data = {};
+
+function new_item(self){
+    console.log("new");
+    console.log("len: "+self.value.length);
+    console.log("id: "+self.parentNode.children[self.parentNode.children.length-1].value);
+    if (self.parentNode.children[self.parentNode.children.length-1].value.length>0){
+        var node = document.createElement("INPUT");
+        node.setAttribute('onchange', 'new_item(this)');
+        node.setAttribute('type', 'text');
+        node.setAttribute('class', 'userlist_item');
+        self.parentNode.appendChild(node);
+    }
+}
+
+function submit(){
+/*
+   Submits JSON of the form
+
+   {
+    'steps': {
+        '1': "Do a thing",
+        '2': "Observe disastrous results",
+        }
+    'problems': {
+        '1': "Only one problem",
+        }
+    'suggestions': {
+        '1': "I would suggest don't do this",
+        }
+    'images': {
+        '1': "http://farxiv.org/media/897698231.png",
+        }
+    'links': {
+        ['steps[1]', 'img[1]'],
+        }
+    }
+
+*/
+
+}
+function jsonify(){
+    var data = {};
+    for (var li in document.getElementById("steps").children){
+
+    }
+}
+</script>
+{% endblock %}
+{% block main %}
+<form id="build_container">
+    <div class="userlist" id="steps" name="steps">
+        <input type='text' class='userlist_item' onchange="new_item(this)" />
+    </div>
+    <div class="userlist" id="problems" name="problems">
+        <input type='text' class='userlist_item' onchange="new_item(this); return false;" />
+    </div>
+    <div class="userlist" id="suggestions" name="suggestions">
+        <input type='text' class='userlist_item' onchange="new_item(this); return false;" />
+    </div>
+</form>
+<input type="button" onclick="submit()" value="Create" />
+{% endblock %}

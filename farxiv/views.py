@@ -17,3 +17,4 @@ class SubmitFarticle(TemplateView):
         context = super(TemplateView, self).get_context_data(**kwargs)
         context['form'] = FarticleForm(instance=self.request.user)
         return context
+

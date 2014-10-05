@@ -28,5 +28,11 @@ class Farticle(models.Model):
     farticle    = models.FileField()
     failure_reasons = models.ManyToManyField(FailureReasons)
     keywords    = models.ManyToManyField(Keyword)
+    #Presentations = models.ManyToManyField(SlidesharePresentations)
     submitted_date = models.DateTimeField(auto_now_add=True)
     modified_date = models.DateTimeField(auto_now=True)
+
+"""
+class SlidesharePresentation(models.Model):
+    slideshow_id = models.TextField()
+"""
