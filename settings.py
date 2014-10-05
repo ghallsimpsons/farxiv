@@ -53,6 +53,7 @@ MIDDLEWARE_CLASSES = (
 # Registration
 ACCOUNT_ACTIVATION_DAYS = 3
 
+LOGIN_URL = '/users/login'
 LOGIN_REDIRECT_URL = '/'
 
 ROOT_URLCONF = 'urls'

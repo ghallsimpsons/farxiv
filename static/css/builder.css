@@ -1,6 +1,16 @@
 .userlist {
     background: #888;
     border: 1px solid #333;
-    margin: 20px;
-    padding: 10px
+    margin: 0px;
+    padding: 10px;
+    float: left;
+    width: 31%;
+}
+.userlist_item {
+    display: block;
+}
+
+#build_container {
+    margin=0px auto;
+    width=100%;
 }

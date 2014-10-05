@@ -56,14 +56,18 @@ function jsonify(){
 {% block main %}
 <form id="build_container">
     <div class="userlist" id="steps" name="steps">
+        Steps Taken:
         <input type='text' class='userlist_item' onchange="new_item(this)" />
     </div>
     <div class="userlist" id="problems" name="problems">
+        Problems Encountered:
         <input type='text' class='userlist_item' onchange="new_item(this); return false;" />
     </div>
     <div class="userlist" id="suggestions" name="suggestions">
+        Suggestions:
         <input type='text' class='userlist_item' onchange="new_item(this); return false;" />
     </div>
 </form>
+<br />
 <input type="button" onclick="submit()" value="Create" />
 {% endblock %}

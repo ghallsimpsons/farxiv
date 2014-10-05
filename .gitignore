@@ -34,6 +34,7 @@ pip-delete-this-directory.txt
 
 # Local host settings
 local_settings.py
+db
 
 # Unit test / coverage reports
 htmlcov/
