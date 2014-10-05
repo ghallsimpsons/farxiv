@@ -32,6 +32,9 @@ var/
 pip-log.txt
 pip-delete-this-directory.txt
 
+# Local host settings
+local_settings.py
+
 # Unit test / coverage reports
 htmlcov/
 .tox/

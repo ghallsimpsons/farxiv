@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>arXiv.org - </title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/static/css/arXiv.css" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-type" content="text/html; charset=us-ascii" />
+
+</head>
+
+<!-- entry2/lib/e2user/arxiv-header-trailer -->
+<body id="front" class="with-cu-identity" onLoad="onload_handler()" onUnload="onunload_handler()">
+<div id="cu-identity">
+    <div id="cu-logo">
+        <a id="insignia-link" href="http://www.cornell.edu/"><img src="/icons/cu/cul_signature_unstyled.gif" alt="Cornell University" width="283" height="76" border="0" /></a>
+    </div>
+</div>
+<div id="header">
+    <h1><a href="/">arXiv.org</a></h1>
+</div>
+
+<div id="content">
+    <h1>Register for the first time (step 1 of 2)</h1>
+
+    <p><b>You should only register with arXiv once:</b> arXiv now connects 
+    papers that you have submitted with your user record. If you register 
+    twice, this information will be inaccurate, which will cause confusion 
+    and wasted time for both you and us.</p>
+
+    <p>If you remember your password but would like to change your e-mail 
+    address, you can <a href="/auth/email-change-form.php">Change your e-mail 
+        address</a>. If you've forgotten your password but can still receive 
+    e-mail at your old address, you can easily 
+    <a href="/auth/recovery-form.php">recover your password</a>. If you
+    have forgotten your password and you cannot receive e-mail at your 
+    old address, please write to
+    <a href="mailto:help@arxiv.org">help@arxiv.org</a>.</p>
+
+
+    {% block content %}
+    <form method="post" action=".">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" id="go_next" value="Next >>" />
+    </form>
+    {% endblock %}
+</div>
+
+<!-- entry2/lib/e2user/arxiv-header-trailer -->
+<div id="footer">
+    <address><a href="/help/contact">Contact</a></address>
+</div>
+
+</body>
+</html>
+
